@@ -14,6 +14,10 @@
 	width: 50vw;
 	height: 50vh;
 	border-radius: 10%;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 20vw;
+	margin-right: 20vw;
 }
 form {
 	float: center;
@@ -63,7 +67,6 @@ form {
 	background-color: rgba(207, 21, 21, 0); /* Green */
 	background-clip: 50%;
 	border: 1px solid rgb(233, 229, 5);
-	border-radius: 10px;
 	color: rgb(243, 229, 29);
 	padding: 15px 32px;
 	text-align: center;
@@ -78,7 +81,6 @@ form {
 	margin-top: 20px;
 	/* You can set the margin property to auto to horizontally center the element within its container. */
 	transition: 500ms;
-	overflow: auto;
 }
 #submit:hover {
 	transform: scale(1.1, 1.1);
@@ -87,5 +89,4 @@ form {
 #submit:active {
 	background-image: unset;
 	transform: scale(1, 1);
-	transition: cubic-bezier(0.77, 0, 0.175, 1);
 }
