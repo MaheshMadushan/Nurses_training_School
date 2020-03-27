@@ -1,0 +1,138 @@
+/* styling background */
+html,
+body {
+	height: 100%;
+	margin: 0;
+	display: inline;
+}
+.bg-image {
+	height: auto;
+	margin: 0;
+	padding-top: 10px;
+	background: url("bg-image-B&W.jpeg") no-repeat center fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: 1s;
+	padding: 5px;
+	/* position: relative; */
+}
+
+.bg-image:hover {
+	background-image: url("bg-image.jpeg");
+	transition: 1s;
+}
+
+/* Form input styling */
+* {
+	box-sizing: border-box;
+}
+#form-props {
+	padding: 10px;
+}
+.form-input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+}
+
+.form-input > div {
+	background-color: rgba(251, 251, 246, 0.8);
+	width: 80%;
+	margin: 10px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 30px;
+	padding: 30px;
+	width: 50vw;
+	height: 100%;
+	/* border-radius: 10%; */
+	border-radius: 15px;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 20vw;
+	margin-right: 20vw;
+}
+form {
+	float: center;
+	text-align: left;
+}
+.div-relative {
+	/* display: inline-block; */
+}
+::placeholder {
+	color: rgb(14, 13, 13);
+}
+.texbox-styles {
+	color: rgb(0, 0, 0);
+	width: 100%;
+	padding: 10px;
+	margin: 3px 0;
+	box-sizing: border-box;
+	border: none;
+	border: 1px solid rgba(126, 101, 101, 0.5);
+	border-radius: 10px;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	background-color: inherit;
+	/* outline: 5px outset rgba(231, 143, 11, 0.5); */
+	font-size: 0.9rem;
+}
+.texbox-styles[type = "password"]:hover {
+	background-attachment: scroll;
+	background-image: url('password-icon.png');
+	/* background-position: -2px -3px; */
+	background-repeat: no-repeat;
+	transition: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+.texbox-styles[type = "password"]:focus {
+	background-attachment: scroll;
+	background-image: url('password-icon.png');
+	/* background-position: -2px -3px; */
+	background-repeat: no-repeat;
+}
+
+.texbox-styles:hover {
+	background-image: url('username-icon.png');
+	/* background-position: -2px -3px; */
+	background-repeat: no-repeat;
+}
+.texbox-styles:focus {
+	background-image: url('username-icon.png');
+	/* background-position: -2px -3px; */
+	background-repeat: no-repeat;
+}
+.button {
+	background-color: inherit;
+	/* Green */
+	background-clip: 50%;
+	border: 1px solid rgb(29, 29, 27);
+	color: rgb(27, 27, 24);
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	cursor: pointer;
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	/* You can set the margin property to auto to horizontally center the element within its container. */
+	transition: 500ms;
+}
+.button:hover {
+	transform: scale(1.1, 1.1);
+	background-color: rgba(32, 32, 30, 0.699);
+}
+
+.button:active {
+	background-image: unset;
+	transform: scale(1, 1);
+}
+#sign-in-btn {
+	border: none;
+	background-color: rgba(32, 32, 30, 0);
+}

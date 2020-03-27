@@ -14,15 +14,18 @@
         <?php include './header.php' ?>
         <div class="form-input">
             <div class="div-relative">
-                <form action="#" method="post">
+                <form action="#" method="post" id="form-props">
                     <input class="texbox-styles" type="text" id="name" name="name" placeholder="Username">
                     <br>
                     <input class="texbox-styles" type="password" name="password" id="password" placeholder="Password">
                     <br>
-                    <input type="submit" value="Login" id="submit">
+                    <input type="submit" value="Login" class="button">
+                    <a href="./reg_students_fom.php" class="button" id="sign-in-btn">sign up</a>
                 </form>
             </div>
+
         </div>
+
     </div>
 
 
