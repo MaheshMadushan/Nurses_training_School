@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,19 +20,24 @@ session_start();
             <div class="div-relative">
                 <form action="./dbOperations/db_add_student.php" method="POST" id="form-props">
                     <label for="Full Name">Full Name:</label>
-                    <input class="texbox-styles" type="text" name="fname" placeholder="Full name" 
-                        value="<?php if (isset($_GET['fname'])) {
-                                            echo $_GET['fname'];}  ?>"
+                    <input class="texbox-styles" type="text" name="fname" placeholder="Full name" value="<?php if (isset($_GET['fname'])) {
+                                                                                                                echo $_GET['fname'];
+                                                                                                            }  ?>"
                         style="background: <?php if (isset($_GET['error']) && $_GET['error'] === "nameexist") {
-                                                    echo "red";}  ?>"
+                                                                                                                                            // if name already in database make txt area background red
+                                                                                                                                            echo "red";
+                                                                                                                                        }  ?>"
                         required>
                     <br>
+
+
                     <label for="Name with initials">Name with initials:</label>
                     <input class="texbox-styles" type="text" name="iname" placeholder="Name with initials"
                         value="<?php if (isset($_GET['iname'])) {
                                                                                                                         echo $_GET['iname'];
                                                                                                                     }  ?>"
                         style=" background: <?php if (isset($_GET['error']) && $_GET['error'] === "nameexist") {
+                                                                                                                                                    // if name already in database make txt area background red
                                                                                                                                                     echo "red";
                                                                                                                                                 }  ?>"
                         required>
@@ -50,17 +53,36 @@ session_start();
                     <label for="NIC">NIC:</label>
                     <input class="texbox-styles" type="text" name="NIC" placeholder="NIC" value="<?php if (isset($_GET['NIC'])) {
                                                                                                         echo $_GET['NIC'];
-                                                                                                    }  ?>" required>
+                                                                                                    }  ?>"
+                        style=" background: <?php if (isset($_GET['error']) && $_GET['error'] === "NICexist") {
+                                                                                                                                    // if name already in database make text area background red
+                                                                                                                                    echo "red";
+                                                                                                                                }  ?>" required>
+                    <span>
+                        <?php if (isset($_GET['error']) && $_GET['error'] === "NICexist") {
+                            echo "<script>alert('NIC already entered')</script>";
+                        }
+                        ?>
+                    </span>
                     <br>
 
                     <label for="email">Email</label>
                     <input class="texbox-styles" type="text" name="email" placeholder="Email" value="<?php if (isset($_GET['email'])) {
                                                                                                             echo $_GET['email'];
                                                                                                         }  ?>"
-                        required>
-                    <span><?php if (isset($_GET['error']) && $_GET['error'] === "invalidemail") {
+                        style=" background: <?php if (isset($_GET['error']) && $_GET['error'] === "emailexist") {
+                                                                                                                                        // if email already in database make text area background red
+                                                                                                                                        echo "red";
+                                                                                                                                    }  ?>" required>
+                    <span>
+                        <?php if (isset($_GET['error'])) {
+                            if ($_GET['error'] === "invalidemail") {
                                 echo "<script>alert('wrong email')</script>";
-                            } ?></span>
+                            } elseif ($_GET['error'] === "emailexist") {
+                                echo "<script>alert('email already used')</script>";
+                            }
+                        } ?>
+                    </span>
                     <br>
 
                     <label for="Password">Password:</label>
@@ -71,6 +93,7 @@ session_start();
                     <label for="rep-Password">Repeat Password:</label>
                     <input class="texbox-styles" type="password" name="rep-Password" id="rep-password"
                         placeholder="Retype password" required>
+                    <!-- script for check confirmed password and password are identical -->
                     <script src="./js/confirm-pw.js"></script>
                     <br>
 

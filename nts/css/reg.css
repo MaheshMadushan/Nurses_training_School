@@ -1,0 +1,47 @@
+.bg-image {
+	padding-top: 10px;
+	background: url("bg-image-B&W.jpeg") no-repeat center fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: 1s;
+	padding:10px;
+	/* position: relative; */
+}
+
+.bg-image:hover {
+	background-image: url("bg-image.jpeg");
+	transition: 1s;
+}
+h1 , form.userform{
+	margin: 20px 0px 25px 100px;
+}
+
+h1 span a {
+	margin: 15px;
+	font-size: 16px;
+	float: right;
+
+}
+fieldset {
+	margin-left: 100px;
+	margin-right: 160px;
+	margin-bottom: 0px;
+}
+
+form.userform label{
+	width: 30%;
+	float: left;
+	font-size: 17px;
+	padding: 4px;
+}
+
+form.userform input {
+	width: 50%;
+	height: 20px;
+	padding: 4px;
+	border-radius: 5px;
+}
+
+form.userform p{
+	padding: 20px;
+}

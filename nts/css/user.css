@@ -1,0 +1,93 @@
+* {
+	margin:0;
+}
+.bg-image {
+	padding-top: 10px;
+	background: url("bg-image-B&W.jpeg") no-repeat center fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: 1s;
+	padding-bottom: 120px;
+	/* position: relative; */
+}
+
+.bg-image:hover {
+	background-image: url("bg-image.jpeg");
+	transition: 1s;
+}
+.top{
+	width: 50px;
+	padding-top: 12px; 
+	font-size: 19px;
+	float: left;
+	
+}
+header {
+	background: #eee;
+	overflow: auto;
+	padding: 10px;
+}
+a {
+	float: right;
+}
+header .appname {
+	float: left;
+}
+
+header .logger {
+	float: right;
+}
+
+table.masterlist {
+	width: 100%;
+	border-collapse: separate;
+	border-color: black;
+	border-left: 1px solid #aaa;
+}
+
+table.masterlist th {
+	background-color: #4CAF50;
+	text-align: left;
+}
+
+table.masterlist th, table.masterlist td {
+	padding: 10px;
+	border-bottom: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+}
+
+
+
+h1 , form.userform{
+	margin: 20px 0px 25px 100px;
+}
+
+h1 span a {
+	margin: 15px;
+	font-size: 16px;
+	float: right;
+
+}
+fieldset {
+	margin-left: 100px;
+	margin-right: 160px;
+	margin-bottom: 0px;
+}
+
+form.userform label{
+	width: 30%;
+	float: left;
+	font-size: 17px;
+	padding: 4px;
+}
+
+form.userform input {
+	width: 50%;
+	height: 20px;
+	padding: 4px;
+	border-radius: 5px;
+}
+
+form.userform p{
+	padding: 20px;
+}

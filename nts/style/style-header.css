@@ -1,0 +1,27 @@
+.nts-text {
+	display: flex;
+	margin: 10px 10px 50px 10px;
+	padding: 0.5vw;
+	background-color: rgba(251, 251, 246, 0.9);
+	border-radius: 15px;
+	font-weight: 1000;
+	font-family: 'Noto Sans TC', sans-serif;
+	text-align: center;
+	font-size: 1em;
+	letter-spacing: 10px;
+}
+
+.nts-text > nts-text1 {
+	height: 100%;
+	margin: 10px;
+	font-weight: 1000;
+	font-family: 'Noto Sans TC', sans-serif;
+	text-align: center;
+	font-size: 2em;
+}
+
+.logo {
+	width: 100px;
+	height: 100px;
+	float: left;
+}
